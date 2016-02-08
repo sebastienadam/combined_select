@@ -139,8 +139,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
        */
       function populateSelect(target, vals, withEmpty) {
         var idTarget = '#'+target;
-        withEmpty = (typeof(withEmpty) === 'undefined') ? false : withEmpty;
-        $(idTarget).html('');
+        withEmpty = withEmpty || false;
+        $(idTarget).empty();
         if(vals !== null) {
           if(withEmpty) {
             $(idTarget).append('<option value=""></option>');
